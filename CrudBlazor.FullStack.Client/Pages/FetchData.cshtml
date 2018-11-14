@@ -57,6 +57,7 @@ else
     </table>
 }
 
+
 @functions {
     List<Employee> emps;
     Employee employee = new Employee();
@@ -71,6 +72,9 @@ else
     {
         var returnEmp = await Http.PostJsonAsync<Employee>($"api/Employees/", employee);
         emps.Add(returnEmp);
+        await JSRuntime.Current.InvokeAsync<string>(
+                "commonJsFunctions.alert",
+                "新增完成");
     }
 
     async Task Edit(int id)
