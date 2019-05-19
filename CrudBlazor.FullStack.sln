@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2050
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28902.138
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudBlazor.FullStack.Server", "CrudBlazor.FullStack.Server\CrudBlazor.FullStack.Server.csproj", "{A1E89E37-636D-4D02-96C6-EC5C1FFEB032}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudBlazor.FullStack.Server", "CrudBlazor.FullStack.Server\CrudBlazor.FullStack.Server.csproj", "{863C36B6-6E9B-46EC-815F-02F3EA2C3D93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudBlazor.FullStack.Client", "CrudBlazor.FullStack.Client\CrudBlazor.FullStack.Client.csproj", "{E0BB6762-9D8C-4FAD-901B-04713D831358}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudBlazor.FullStack.Client", "CrudBlazor.FullStack.Client\CrudBlazor.FullStack.Client.csproj", "{FF6A6260-CFEC-4B77-854D-E002D0FDA2D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudBlazor.FullStack.Shared", "CrudBlazor.FullStack.Shared\CrudBlazor.FullStack.Shared.csproj", "{C14861B8-1953-44FD-9C7F-13606D48890B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudBlazor.FullStack.Shared", "CrudBlazor.FullStack.Shared\CrudBlazor.FullStack.Shared.csproj", "{A3501059-D1A0-407F-8876-2882E16E7ADC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,23 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A1E89E37-636D-4D02-96C6-EC5C1FFEB032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1E89E37-636D-4D02-96C6-EC5C1FFEB032}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1E89E37-636D-4D02-96C6-EC5C1FFEB032}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1E89E37-636D-4D02-96C6-EC5C1FFEB032}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E0BB6762-9D8C-4FAD-901B-04713D831358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E0BB6762-9D8C-4FAD-901B-04713D831358}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E0BB6762-9D8C-4FAD-901B-04713D831358}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E0BB6762-9D8C-4FAD-901B-04713D831358}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C14861B8-1953-44FD-9C7F-13606D48890B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C14861B8-1953-44FD-9C7F-13606D48890B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C14861B8-1953-44FD-9C7F-13606D48890B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C14861B8-1953-44FD-9C7F-13606D48890B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{863C36B6-6E9B-46EC-815F-02F3EA2C3D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{863C36B6-6E9B-46EC-815F-02F3EA2C3D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{863C36B6-6E9B-46EC-815F-02F3EA2C3D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{863C36B6-6E9B-46EC-815F-02F3EA2C3D93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF6A6260-CFEC-4B77-854D-E002D0FDA2D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF6A6260-CFEC-4B77-854D-E002D0FDA2D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF6A6260-CFEC-4B77-854D-E002D0FDA2D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF6A6260-CFEC-4B77-854D-E002D0FDA2D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3501059-D1A0-407F-8876-2882E16E7ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3501059-D1A0-407F-8876-2882E16E7ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3501059-D1A0-407F-8876-2882E16E7ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3501059-D1A0-407F-8876-2882E16E7ADC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DC60BA63-1247-496B-841E-5677D29F78FC}
+		SolutionGuid = {62D16762-7794-4A54-84F5-1B9A0D07B15A}
 	EndGlobalSection
 EndGlobal
