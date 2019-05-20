@@ -1,5 +1,10 @@
 ﻿@using CrudBlazor.FullStack.Shared
 @page "/fetchdata"
+@using Telerik.Blazor.Components.Button
+@using Telerik.Blazor.Components.Grid
+@using NPOI;
+@using NPOI.XSSF.UserModel;
+@using System.IO
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
 
@@ -56,12 +61,22 @@ else
             }
         </tbody>
     </table>
+    <TelerikGrid Data=@emps Height="400px"
+                 Sortable=true
+                 Pageable=true>
+        <TelerikGridColumns>
+            <TelerikGridColumn Field="Id" />
+            <TelerikGridColumn Field="FirstName" Title="Temp. C" />
+            <TelerikGridColumn Field="LastName" />
+        </TelerikGridColumns>
+    </TelerikGrid>
+    <TelerikButton onclick="@ExportExcel">Download</TelerikButton>
 }
 
 
 @functions {
-    List<Employee> emps;
-    Employee employee = new Employee();
+        List<Employee> emps;
+        Employee employee = new Employee();
 
 
     protected override async Task OnInitAsync()
@@ -95,6 +110,35 @@ else
         await Http.DeleteAsync($"api/Employees/{id}");
         var index = emps.FindIndex(m => m.Id == id);
         emps.RemoveAt(index);
+    }
+
+    async Task ExportExcel()
+    {
+        var wb = new XSSFWorkbook();
+        var ws = wb.CreateSheet("Class");
+
+        //欄位名稱
+        ws.CreateRow(0);
+        ws.GetRow(0).CreateCell(0).SetCellValue("Id");
+        ws.GetRow(0).CreateCell(1).SetCellValue("FirstName");
+        ws.GetRow(0).CreateCell(2).SetCellValue("LastName");
+
+        for (int i = 0; i < emps.Count; i++)
+        {
+            ws.CreateRow(i);
+            ws.GetRow(i).CreateCell(0).SetCellValue(emps[i].Id);
+            ws.GetRow(i).CreateCell(1).SetCellValue(emps[i].FirstName);
+            ws.GetRow(i).CreateCell(2).SetCellValue(emps[i].LastName);
+
+        }
+
+        var m = new MemoryStream();
+        wb.Write(m);
+
+        await JsRuntime.InvokeAsync<object>(
+            "saveAsFile",
+            "filename.xlsx",
+            Convert.ToBase64String(m.ToArray()));
     }
 
 }

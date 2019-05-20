@@ -7,6 +7,7 @@ namespace CrudBlazor.FullStack.Client
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTelerikBlazor();
         }
 
         public void Configure(IComponentsApplicationBuilder app)

@@ -7,17 +7,28 @@
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/@progress/kendo-theme-default@latest/dist/all.css" />
 </head>
 <body>
     <app>Loading...</app>
 
     <script src="_framework/blazor.webassembly.js"></script>
+    <script src="https://kendo.cdn.telerik.com/blazor/1.1.0/telerik-blazor.min.js" defer></script>
     <script>
         window.commonJsFunctions = {
             alert: function (msg) {
                 alert(msg);
             }
         };
+
+        function saveAsFile(filename, bytesBase64) {
+            var link = document.createElement('a');
+            link.download = filename;
+            link.href = "data:application/octet-stream;base64," + bytesBase64;
+            document.body.appendChild(link); // Needed for Firefox
+            link.click();
+            document.body.removeChild(link);
+        }
     </script>
 </body>
 </html>
